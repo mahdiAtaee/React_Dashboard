@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "مهدی",
+      "lastName": "عطایی",
+      "phoneNumber": "09121234567",
+      "state": "تهران",
+      "city": "پردیس"
+    },
+    {
+      "id": 2,
+      "name": "مهدی",
+      "lastName": "عطایی",
+      "phoneNumber": "09121234567",
+      "state": "تهران",
+      "city": "پردیس"
+    },
+    {
+      "id": 3,
+      "name": "مهدی",
+      "lastName": "عطایی",
+      "phoneNumber": "09121234567",
+      "state": "تهران",
+      "city": "پردیس"
+    }
+  ]
+}

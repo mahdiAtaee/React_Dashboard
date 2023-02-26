@@ -3,9 +3,9 @@ import Users from "../assets/img/group.png";
 import AboutUs from "../assets/img/info.png";
 import Companies from "../assets/img/office-building.png";
 import Orders from "../assets/img/clipboard.png";
-const Sidebar = () => {
+const Sidebar = ({ active }) => {
   return (
-    <div className="sidebar">
+    <div className={active ? "sidebar active" : "sidebar"}>
       <div className="logo f-center-start">
         <img src={Logo} alt="logo" className="sm-img" />
         <span> Dashboard</span>

@@ -2,6 +2,13 @@
   width: calc(100% - 250px);
   margin-left: 250px;
   padding: 0 2rem;
+  transition: 0.5s ease-in-out;
+}
+
+.dashboard.spread {
+  width: calc(100% - 102px);
+  margin-left: 102px;
+  padding: 0 2rem;
 }
 
 .dashboard_header {
@@ -24,7 +31,7 @@
   margin-left: 0.4rem;
 }
 .sidebar {
-  width: 250px;
+  width: 102px;
   height: 100vh;
   max-height: 100%;
   box-shadow: 5px 10px 20px 4px #0004;
@@ -34,10 +41,29 @@
   position: fixed;
   top: 0;
   left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.sidebar.active {
+  width: 250px;
+}
+
+.sidebar.active div.logo span {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.sidebar div.logo span {
+  opacity: 0;
+}
+
+.sidebar ul li a {
+  overflow: hidden;
 }
 
 .sidebar div.logo {
   margin-bottom: 2rem;
+  margin-left: 0.7rem;
 }
 
 .sidebar .logo img {
