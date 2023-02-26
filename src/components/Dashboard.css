@@ -1,0 +1,82 @@
+.dashboard {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  padding: 0 2rem;
+}
+
+.dashboard_header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard_header .profile,
+.dashboard_header .user_Info_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: max-content;
+}
+
+.dashboard_header .user_Info_section .profile .down_arrow img {
+  vertical-align: -7px;
+  margin-left: 0.4rem;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  max-height: 100%;
+  box-shadow: 5px 10px 20px 4px #0004;
+  padding: 1rem;
+  text-align: left;
+  border-left: 1rem solid #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar div.logo {
+  margin-bottom: 2rem;
+}
+
+.sidebar .logo img {
+  margin-right: 1rem;
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar ul li {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0.7rem;
+  border-radius: 11px;
+  transition: 0.3s ease-in;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: #1184c7;
+}
+
+.sidebar ul li:hover a img,
+.sidebar ul li.active a img {
+  filter: invert(1);
+}
+
+.sidebar ul li:hover a,
+.sidebar ul li.active a {
+  color: #fff;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.8rem;
+}
+
+.sidebar ul li a span {
+  margin-left: 1rem;
+}

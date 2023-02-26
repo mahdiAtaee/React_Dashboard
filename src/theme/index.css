@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "vazir";
+  src: local("Vazir"), url("../assets/fonts/vazir/Vazir.eot"),
+    url("../assets/fonts/vazir/Vazir.woff") format("woff")
+      url("../assets/fonts/vazir/Vazir.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "vazir-Bold";
+  src: local("Vazir"), url("../assets/fonts/vazir/Vazir-Bold.eot"),
+    url("../assets/fonts/vazir/Vazir-Bold.woff") format("woff"),
+    url("../assets/fonts/vazir/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "vazir-Light";
+  src: local("Vazir"), url("../assets/fonts/vazir/Vazir-Light.eot"),
+    url("../assets/fonts/vazir/Vazir-Light.woff") format("woff")
+      url("../assets/fonts/vazir/Vazir-Light.ttf") format("truetype");
+  font-weight: lighter;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: vazir;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+p,
+span {
+  font-size: 0.8rem;
+}
+
+.sm-img {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.f-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.flex-v {
+  flex-direction: column;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 0.6em 0 0;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  opacity: 0.5;
+}
+
+input[type="checkbox"]:hover {
+  opacity: 1;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #000;
+  opacity: 1;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+
+.btn {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #1cd61c;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #fe3939;
+  color: #fff;
+}
