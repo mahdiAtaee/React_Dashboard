@@ -33,8 +33,6 @@ const User = ({ userID }) => {
     });
   };
 
-  // useCallback(fetchUser(), [dispatch, userID, status]);
-  console.log(status);
   useEffect(() => {
     if (
       status === "USER_DELETED" ||

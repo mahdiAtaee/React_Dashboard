@@ -31,12 +31,9 @@ const UsersTableHeader = () => {
     });
   };
   const handleDeleteUsers = async () => {
-    dispatch({
-      type: actionTypes.IS_CHECKED_USER,
+    await dispatch({
+      type: actionTypes.DELETE_USERS,
     });
-    // await dispatch({
-    //   type: actionTypes.DELETE_USERS,
-    // });
   };
 
   return (
