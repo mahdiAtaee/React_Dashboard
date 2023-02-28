@@ -3,10 +3,26 @@ import Magnifier from "../../assets/img/loupe.png";
 import { actionTypes } from "../../app/reducer";
 import { useUserDispatch } from "../../app/context";
 import { useState } from "react";
+import { CSVLink } from "react-csv";
 
-const UsersTableHeader = () => {
+const UsersTableHeader = ({ allUsers }) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const dispatch = useUserDispatch();
+
+  const headers = [
+    { label: "نام", key: "name" },
+    { label: "نام خانوادگی", key: "lastName" },
+    { label: "شماره تماس", key: "phoneNumber" },
+    { label: "استان", key: "state" },
+    { label: "شهر", key: "city" },
+  ];
+
+  const csvReport = {
+    filename: "report.csv",
+    headers,
+    data: allUsers,
+  };
+
   const handleShowModal = () => {
     dispatch({
       type: actionTypes.SHOW_MODAL,
@@ -129,6 +145,7 @@ const UsersTableHeader = () => {
           />
           <img src={Magnifier} className="magnifier" alt="#" />
         </div>
+        <CSVLink {...csvReport} className="btn btn-warning">خروجی اکسل</CSVLink>
         <button className="btn btn-success add_user" onClick={handleShowModal}>
           اضافه کردن
         </button>

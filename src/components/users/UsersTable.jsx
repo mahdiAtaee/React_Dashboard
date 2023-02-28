@@ -6,17 +6,21 @@ import { GET_REQUEST } from "../../services/HttpClient";
 import { useEffect, useState } from "react";
 import { actionTypes } from "../../app/reducer";
 
-const fetchUsers = async (page = 1, limit = 10) => {
+const fetchUsers = async (page = 1, limit) => {
   return await GET_REQUEST(`users?_page=${page}&_limit=${limit}`);
 };
 const maxPage = async () => {
   return await GET_REQUEST("users").then((response) => response.length);
+};
+const fetchAllUsers = async () => {
+  return await GET_REQUEST("users");
 };
 
 const UsersTable = () => {
   const dispatch = useUserDispatch();
   const { entities, status, query, searchFilter } = useUserContext();
   const [users, setUsers] = useState(entities);
+  const [allUsers, setAllUsers] = useState([]);
   let [page, setPage] = useState(1);
   let [limit, setLimit] = useState(10);
   const forceUpdate = useForceUpdate();
@@ -33,9 +37,9 @@ const UsersTable = () => {
     forceUpdate();
   };
 
-  const handlePageClick = (e,index) => {
+  const handlePageClick = async (e, index) => {
     setPage(index);
-    fetchUsers(page, limit).then((response) => setUsers(response));
+    await fetchUsers(page, limit).then((response) => setUsers(response));
     forceUpdate();
   };
 
@@ -43,6 +47,7 @@ const UsersTable = () => {
     fetchUsers().then((response) => {
       setUsers(response);
     });
+    fetchAllUsers().then((response) => setAllUsers(response));
   }, []);
 
   const search = (data) => {
@@ -74,7 +79,7 @@ const UsersTable = () => {
 
   return (
     <div className="table_wrapper">
-      <UsersTableHeader />
+      <UsersTableHeader allUsers={allUsers}/>
       <table>
         <thead>
           <tr>

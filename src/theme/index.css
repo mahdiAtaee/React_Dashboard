@@ -145,6 +145,18 @@ input[type="checkbox"]:before {
   color: #fff;
 }
 
+.btn-warning{
+  padding: 0.3rem 0.9rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: #0c9b0c;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
 .loader {
   font-size: 10px;
   margin: 50px auto;
