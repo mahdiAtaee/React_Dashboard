@@ -96,3 +96,32 @@ th {
   color: #fff;
   border: none;
 }
+
+.search_filter .dropDown_outer {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #eee;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.search_filter .dropDown_outer .dropDown_header span.arrow svg {
+  vertical-align: -4px;
+  margin-right: 1rem;
+}
+
+.search_filter .dropDown_outer .dropDown_inner {
+  border: 1px solid #eee;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  padding: 0.7rem;
+  display: block;
+  transition: 0.5s ease-in;
+}
+
+.search_filter .dropDown_outer .dropDown_inner.hidden{
+  display: none;
+}

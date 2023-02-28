@@ -10,6 +10,7 @@ import Sidebar from "./Sidebar";
 
 const Dashboard = () => {
   const [sidebarIsActive, setSidebarIsActive] = useState(true);
+ 
   const handleClick = () => {
     setSidebarIsActive(!sidebarIsActive);
   };
